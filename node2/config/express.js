@@ -1,0 +1,8 @@
+var express = require('express');
+module.exports = function() {
+    var app = express();
+    require('../app/routes/index.server.routes.js')(app);
+    return app;
+};
+// app.use(express.static('./public'));
+app.use(express.static(path.join(__dirname, 'public')));
